@@ -10,6 +10,7 @@ import br.udesc.ceavi.pin2.EulerAPI.repositorio.AtividadeRepositorio;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,6 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/atividades")
 public class AtividadeController {
     
+	@Autowired
     private AtividadeRepositorio atr;
     
     @GetMapping("/{id}")
